@@ -281,6 +281,8 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 400px; /* Set the width you want for the images */
+  height: 300px; /* Set the height you want for the images */
     }
 .centered-image {
   max-width: 100%; /* Ensure the image doesn't exceed its original width */
