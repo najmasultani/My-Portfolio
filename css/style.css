@@ -294,3 +294,20 @@ img {
   justify-content: center;
   align-items: center;
   min-height: 100vh;}
+
+.fancy-name {
+  font-size: 42px; /* Customize the font size as needed */
+  color: #EC1A6E; /* Change the color to pink (#ff69b4) or any other color you prefer */
+  text-align: center;
+  margin-top: 2px; /* Adjust the top margin to align with other sections */
+}
+
+.najma {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.sultani {
+  display: block;
+  margin-top: -2px; /* Adjust the top margin to align with the bottom part of the name */
+}
