@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -100,7 +99,7 @@ export const MLPipeline = () => {
                 <div className="text-slate-300">Pipeline Reliability</div>
               </div>
               <div className="space-y-2">
-                <div className="text-3xl font-bold text-purple-400">< 2min</div>
+                <div className="text-3xl font-bold text-purple-400">&lt; 2min</div>
                 <div className="text-slate-300">Deployment Time</div>
               </div>
               <div className="space-y-2">
