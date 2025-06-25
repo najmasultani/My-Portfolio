@@ -15,13 +15,17 @@ export const Footer = () => {
           
           <div className="flex space-x-6">
             <a 
-              href="#" 
+              href="https://github.com/najmasultani" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-slate-400 hover:text-purple-400 transition-colors duration-200 transform hover:scale-110"
             >
               <Github className="h-6 w-6" />
             </a>
             <a 
-              href="#" 
+              href="https://www.linkedin.com/in/najmasultani" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-slate-400 hover:text-purple-400 transition-colors duration-200 transform hover:scale-110"
             >
               <Linkedin className="h-6 w-6" />
@@ -31,7 +35,7 @@ export const Footer = () => {
         
         <div className="border-t border-slate-700 mt-8 pt-8 text-center">
           <p className="text-slate-400">
-            © 2024 ML Engineer Portfolio. Built with React, TypeScript, and Tailwind CSS.
+            © 2024 Najma Sultani. Built with React, TypeScript, and Tailwind CSS.
           </p>
         </div>
       </div>

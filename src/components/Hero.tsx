@@ -8,12 +8,13 @@ export const Hero = () => {
       <div className="max-w-4xl mx-auto text-center">
         <div className="mb-8">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            ML Engineer
+            Najma Sultani
             <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Portfolio
+              ML Engineer
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            PEY Student in Engineering Science (Machine Intelligence Option) at University of Toronto. 
             Building, optimizing, and deploying machine learning systems that solve real-world problems. 
             Specializing in MLOps, model deployment, and end-to-end ML pipelines.
           </p>
@@ -37,13 +38,17 @@ export const Hero = () => {
 
         <div className="flex justify-center space-x-6">
           <a 
-            href="#" 
+            href="https://github.com/najmasultani" 
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-slate-400 hover:text-purple-400 transition-colors duration-200 transform hover:scale-110"
           >
             <Github className="h-8 w-8" />
           </a>
           <a 
-            href="#" 
+            href="https://www.linkedin.com/in/najmasultani" 
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-slate-400 hover:text-purple-400 transition-colors duration-200 transform hover:scale-110"
           >
             <Linkedin className="h-8 w-8" />

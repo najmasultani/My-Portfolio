@@ -44,8 +44,8 @@ export const About = () => {
               <CardContent className="space-y-6">
                 <div>
                   <p className="text-slate-300 leading-relaxed mb-4">
-                    I'm a Machine Learning Engineer with a passion for building end-to-end ML systems that solve real-world problems. 
-                    Currently pursuing my Master's in Computer Science with a focus on ML Engineering and MLOps.
+                    I'm Najma Sultani, a PEY student in Engineering Science with a Machine Intelligence option at the University of Toronto. 
+                    I have a passion for building end-to-end ML systems that solve real-world problems.
                   </p>
                   <p className="text-slate-300 leading-relaxed mb-4">
                     My experience spans from research and prototyping to production deployment and monitoring. I specialize in 
@@ -73,11 +73,19 @@ export const About = () => {
                   <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700">
                     Download Resume
                   </Button>
-                  <Button variant="outline" className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white">
+                  <Button 
+                    variant="outline" 
+                    className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white"
+                    onClick={() => window.open("https://github.com/najmasultani", "_blank")}
+                  >
                     <Github className="w-4 h-4 mr-2" />
                     GitHub
                   </Button>
-                  <Button variant="outline" className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white">
+                  <Button 
+                    variant="outline" 
+                    className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white"
+                    onClick={() => window.open("https://www.linkedin.com/in/najmasultani", "_blank")}
+                  >
                     <Linkedin className="w-4 h-4 mr-2" />
                     LinkedIn
                   </Button>
