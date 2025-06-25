@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
@@ -7,11 +6,11 @@ export const Navigation = () => {
 
   const navItems = [
     { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Experience", href: "#experience" },
     { name: "Projects", href: "#projects" },
     { name: "Challenges", href: "#challenges" },
     { name: "Pipeline", href: "#pipeline" },
-    { name: "Experience", href: "#experience" },
-    { name: "About", href: "#about" },
   ];
 
   return (
