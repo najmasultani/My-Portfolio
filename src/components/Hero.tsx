@@ -10,13 +10,13 @@ export const Hero = () => {
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Najma Sultani
             <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              ML Engineer
+              AI & LLM Engineer
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            PEY Student in Engineering Science (Machine Intelligence Option) at University of Toronto. 
-            Building, optimizing, and deploying machine learning systems that solve real-world problems. 
-            Specializing in MLOps, model deployment, and end-to-end ML pipelines.
+            PEY student in Engineering Science (Machine Intelligence) at the University of Toronto. 
+            Exploring large language models, AI agents, and interactive systems that bridge research and real-world use. 
+            Passionate about building intelligent tools that are adaptable, explainable, and useful.
           </p>
         </div>
         
