@@ -7,31 +7,76 @@ import { Github } from "lucide-react";
 export const FeaturedProjects = () => {
   const projects = [
     {
-      title: "Custom Image Classification Pipeline",
-      description: "End-to-end ML pipeline for image classification using PyTorch with custom data augmentation and transfer learning techniques.",
-      techStack: ["PyTorch", "OpenCV", "Docker", "FastAPI", "AWS S3"],
-      role: "ML Engineer & Full-Stack Developer",
-      github: "#",
+      title: "AI Scope",
+      description: "Multi-Agent AI System with Google ADK & Gemini API. Built a modular agent framework with a manager coordinating sub-agents to track, test, and summarize AI tools and research in real time.",
+      techStack: ["Python", "Google ADK", "Gemini API"],
+      role: "Multi-Agent Developer",
+      github: "https://github.com/najmasultani/AIScope",
       demo: "#",
-      highlights: ["95% accuracy on custom dataset", "Deployed with 99.9% uptime", "Processes 1000+ images/minute"]
+      highlights: ["Automated discovery and summarization of AI tools and papers", "Integrated live GitHub tracking and LLM-based analysis", "Hands-on testing workflow for code validation and comparison"]
     },
     {
-      title: "ML Model Deployment with FastAPI",
-      description: "Production-ready API deployment of multiple ML models with automated testing, monitoring, and A/B testing capabilities.",
-      techStack: ["FastAPI", "Docker", "Kubernetes", "MLflow", "Prometheus"],
-      role: "MLOps Engineer",
-      github: "#",
+      title: "Smart Study",
+      description: "AI-Based GPA Optimization Tool – ECE324 Course Project. Developed a tool to improve GPA by optimizing study habits using TabPFN, GPT-4, and KNN peer matching, deployed via Gradio.",
+      techStack: ["TabPFN", "Bayesian Optimization", "GPT-4", "Gradio", "KNN"],
+      role: "ML Researcher & App Developer",
+      github: "https://github.com/elorie-bernard-lacroix/SmartStudy",
       demo: "#",
-      highlights: ["Auto-scaling deployment", "Real-time monitoring", "A/B testing framework"]
+      highlights: ["Built personalized study habit recommender system", "Generated advice based on similar student profiles", "Submitted authored research to NeurIPS 2025"]
     },
     {
-      title: "Kaggle Competition: Feature Engineering & Model Stacking",
-      description: "Top 5% solution using advanced feature engineering, ensemble methods, and model stacking techniques.",
-      techStack: ["Pandas", "Scikit-learn", "XGBoost", "LightGBM", "Optuna"],
-      role: "Data Scientist & ML Engineer",
+      title: "Feedforward Neural Networks",
+      description: "Built and trained feedforward networks using both NumPy and PyTorch for classification tasks as part of ECE421.",
+      techStack: ["NumPy", "PyTorch", "ReLU", "CrossEntropyLoss"],
+      role: "ECE421 Project",
+      github: "https://github.com/najmasultani/Machine-Learning-Projects/tree/main/IrisClassifier-FeedForwardNN",
+      demo: "#",
+      highlights: ["Implemented 2-layer neural network from scratch using NumPy", "Trained and tuned on IRIS dataset with cross-entropy loss", "Built a PyTorch MLP for FashionMNIST using nn.Linear and ReLU"]
+    },
+    {
+      title: "RNNs & Reinforcement Learning",
+      description: "Explored sequence modeling and reinforcement learning techniques through hands-on implementations in ECE421.",
+      techStack: ["Python", "NumPy", "RNN", "LSTM", "Q-Learning"],
+      role: "ECE421 Project",
+      github: "https://github.com/najmasultani/Machine-Learning-Projects/tree/main/Pocket%20Algorithm%20and%20Linear%20Regression",
+      demo: "#",
+      highlights: ["Implemented vanilla RNN and LSTM for the Adding Problem", "Built Value Iteration and Q-Learning agents for GridWorld and Pacman", "Developed Approximate Q-Learning with feature-based representations"]
+    },
+    {
+      title: "PlastiSorter",
+      description: "Plastic Sorting System – Praxis III Engineering Project. Led development of an automated plastic sorter to address waste management in Ghana, delivering a functional prototype.",
+      techStack: ["C++", "Arduino", "CAD"],
+      role: "Team Lead & Embedded Developer",
       github: "#",
       demo: "#",
-      highlights: ["Top 5% ranking", "Novel feature engineering", "Ensemble of 12 models"]
+      highlights: ["Programmed sorting logic to improve identification accuracy", "Delivered working prototype aligned with sustainability goals", "Authored technical design dossier and lab notebook"]
+    },
+    {
+      title: "RL for Speech Disfluency",
+      description: "Reinforcement Learning Research Project – U of T. Contributed to a reinforcement learning system aimed at improving medication strategies for speech disfluency.",
+      techStack: ["Python", "Reinforcement Learning", "Excel", "YouTube"],
+      role: "Data Coordinator & Research Contributor",
+      github: "https://paperswithcode.com/search?q=author%3ANajma+Sultani",
+      demo: "#",
+      highlights: ["Assisted with data collection and timeline management", "Helped structure research content for publication", "Project led by Prof. Michael Guerzhoy and team of 15"]
+    },
+    {
+      title: "C-Sheet",
+      description: "Training Device for Blind Curlers – Praxis II Project. Built an assistive training device integrating auditory feedback for accessibility in curling.",
+      techStack: ["Python", "AutoCAD"],
+      role: "Team Lead & Accessibility Engineer",
+      github: "#",
+      demo: "#",
+      highlights: ["Led 5-person team from concept to prototype", "Focused on user-centric design for visually impaired users", "Integrated community feedback into design iteration"]
+    },
+    {
+      title: "Vision Vapor Stopper",
+      description: "Anti-Fogging Innovation – Praxis I Project. Designed a compact tool to prevent glasses from fogging in everyday settings.",
+      techStack: ["SolidWorks", "Prototyping", "Materials"],
+      role: "Team Lead & Product Designer",
+      github: "#",
+      demo: "#",
+      highlights: ["Directed timeline and planning across full project lifecycle", "Prioritized user needs and design feasibility", "Delivered final prototype and design report"]
     }
   ];
 
@@ -86,7 +131,12 @@ export const FeaturedProjects = () => {
                 </div>
 
                 <div className="flex gap-3 pt-4">
-                  <Button size="sm" variant="outline" className="flex-1 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white">
+                  <Button 
+                    size="sm" 
+                    variant="outline" 
+                    className="flex-1 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white"
+                    onClick={() => window.open(project.github, '_blank')}
+                  >
                     <Github className="w-4 h-4 mr-2" />
                     Code
                   </Button>
