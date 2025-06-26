@@ -6,20 +6,20 @@ import { Github, Linkedin } from "lucide-react";
 
 export const About = () => {
   const skills = {
-    "ML/AI": ["PyTorch", "TensorFlow", "Scikit-learn", "XGBoost", "LightGBM", "Hugging Face"],
-    "MLOps": ["MLflow", "DVC", "Kubeflow", "Apache Airflow", "Great Expectations", "Evidently"],
-    "Backend": ["FastAPI", "Flask", "Django", "Node.js", "PostgreSQL", "MongoDB"],
-    "Cloud & DevOps": ["AWS", "GCP", "Docker", "Kubernetes", "Terraform", "GitHub Actions"],
-    "Languages": ["Python", "SQL", "JavaScript", "R", "Bash", "YAML"]
+    "AI/ML Core": ["Supervised & Unsupervised Learning", "Deep Learning (Transformers, CNNs, RLHF)", "LLM Fine-Tuning (LLaMA 2, Mistral)", "Retrieval-Augmented Generation (RAG)", "Hyperparameter Tuning (Optuna)", "AI Agent Development"],
+    "AI Frameworks & Tools": ["LangChain", "LangGraph", "Hugging Face", "OpenAI API", "CrewAI", "MLflow", "Cursor IDE"],
+    "Programming & Deployment": ["Python", "C", "SQL", "FastAPI", "Docker", "Git", "Model Deployment"]
   };
 
   const interests = [
+    "Multi-Agent AI Systems",
+    "Large Language Models (LLMs) & Foundation Models",
+    "Autonomous Agents & Tool-Use",
+    "Retrieval-Augmented Generation (RAG)",
+    "LLM Orchestration & Workflow Automation",
     "MLOps & Model Deployment",
-    "Natural Language Processing", 
-    "Computer Vision",
-    "Distributed Systems",
-    "Model Optimization & Quantization",
-    "Real-time ML Applications"
+    "Model Optimization (LoRA, Quantization, Distillation)",
+    "Real-time & Interactive ML Applications"
   ];
 
   return (
@@ -27,10 +27,10 @@ export const About = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            About Me
+            About
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Passionate about building scalable ML systems that bridge the gap between research and production.
+            PEY student in Engineering Science (Machine Intelligence) at the University of Toronto, with a strong interest in Large Language Models, autonomous agents, and applied AI. Passionate about building intelligent systems that are interactive, adaptive, and grounded in real-world use cases.
           </p>
         </div>
 
@@ -44,16 +44,13 @@ export const About = () => {
               <CardContent className="space-y-6">
                 <div>
                   <p className="text-slate-300 leading-relaxed mb-4">
-                    I'm Najma Sultani, a PEY student in Engineering Science with a Machine Intelligence option at the University of Toronto. 
-                    I have a passion for building end-to-end ML systems that solve real-world problems.
+                    I'm Najma Sultani, a PEY student in Engineering Science (Machine Intelligence) at the University of Toronto with a strong interest in applied AI, autonomous agents, and Large Language Models.
                   </p>
                   <p className="text-slate-300 leading-relaxed mb-4">
-                    My experience spans from research and prototyping to production deployment and monitoring. I specialize in 
-                    creating robust, scalable ML pipelines that can handle the complexities of real-world data and business requirements.
+                    My experience spans academic research, hackathons, and hands-on development of intelligent systems. I've explored reinforcement learning, neural networks, and multi-agent architectures through both coursework and real-world projects.
                   </p>
                   <p className="text-slate-300 leading-relaxed">
-                    I'm actively seeking internship and full-time opportunities in ML Engineering where I can contribute to 
-                    impactful projects and continue growing my expertise in production ML systems.
+                    I'm currently focused on deepening my skills in AI system design, interpretability, and language model applications through both academic and independent work.
                   </p>
                 </div>
 

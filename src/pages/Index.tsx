@@ -4,7 +4,6 @@ import { About } from "@/components/About";
 import { WorkExperience } from "@/components/WorkExperience";
 import { FeaturedProjects } from "@/components/FeaturedProjects";
 import { EngineeringChallenges } from "@/components/EngineeringChallenges";
-import { MLPipeline } from "@/components/MLPipeline";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 
@@ -17,7 +16,6 @@ const Index = () => {
       <WorkExperience />
       <FeaturedProjects />
       <EngineeringChallenges />
-      <MLPipeline />
       <Footer />
     </div>
   );

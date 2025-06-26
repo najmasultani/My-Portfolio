@@ -83,7 +83,7 @@ export const WorkExperience = () => {
             Work Experience
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Professional experience in AI engineering, data science, and research roles.
+            Professional experience in AI engineering, research, and data analysis roles.
           </p>
         </div>
 

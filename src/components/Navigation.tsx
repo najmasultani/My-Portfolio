@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
@@ -10,7 +11,6 @@ export const Navigation = () => {
     { name: "Experience", href: "#experience" },
     { name: "Projects", href: "#projects" },
     { name: "Challenges", href: "#challenges" },
-    { name: "Pipeline", href: "#pipeline" },
   ];
 
   return (
@@ -18,7 +18,7 @@ export const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <h1 className="text-xl font-bold text-white">ML Engineer Portfolio</h1>
+            <h1 className="text-xl font-bold text-white">AI Engineer Portfolio</h1>
           </div>
           
           {/* Desktop Navigation */}

@@ -88,7 +88,7 @@ export const FeaturedProjects = () => {
             Featured Projects
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            A showcase of my machine learning engineering projects, from research to production deployment.
+            A showcase of my AI and machine learning projects, from multi-agent systems to neural network implementations.
           </p>
         </div>
 

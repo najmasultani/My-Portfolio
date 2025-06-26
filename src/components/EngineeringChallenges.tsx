@@ -1,21 +1,9 @@
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 export const EngineeringChallenges = () => {
   const challenges = [
-    {
-      title: "Predicting Disease-Causing Mutations",
-      subtitle: "Bioinformatics Hackathon 2024",
-      period: "Jan 2024",
-      teamInfo: "Team of 10 • ML + Genomics Challenge",
-      description: "Built an ML model to predict Alzheimer's-linked mutations from genomic sequences, with a focus on women's health.",
-      problem: "Alzheimer's disproportionately affects women, yet genetic prediction tools are scarce and often inaccessible to clinicians.",
-      approach: "Used DSS NIAGADS and GenomeKit datasets filtered on p-values < 0.05. Engineered features from biological mutation patterns and trained a Random Forest combined with Borzoi (gReLU) for mutation effect prediction.",
-      model: "",
-      evaluation: "",
-      outcome: "Collaborated in a cross-functional team of 10 to build a working predictive model within 48 hours. Proposed improvements for clinical accessibility and enhanced mutation localization.",
-      techStack: ["Python", "Random Forest", "gReLU", "Borzoi", "Genomics"]
-    },
     {
       title: "Scrapple AI",
       subtitle: "The AI Collective & Lovable x Roam Hackathon",
@@ -57,6 +45,19 @@ export const EngineeringChallenges = () => {
       techStack: ["Python", "Neural Networks", "EEG/ECG", "ML"]
     },
     {
+      title: "Predicting Disease-Causing Mutations",
+      subtitle: "Bioinformatics Hackathon 2024",
+      period: "Jan 2024",
+      teamInfo: "Team of 10 • ML + Genomics Challenge",
+      description: "Built an ML model to predict Alzheimer's-linked mutations from genomic sequences, with a focus on women's health.",
+      problem: "Alzheimer's disproportionately affects women, yet genetic prediction tools are scarce and often inaccessible to clinicians.",
+      approach: "Used DSS NIAGADS and GenomeKit datasets filtered on p-values < 0.05. Engineered features from biological mutation patterns and trained a Random Forest combined with Borzoi (gReLU) for mutation effect prediction.",
+      model: "",
+      evaluation: "",
+      outcome: "Collaborated in a cross-functional team of 10 to build a working predictive model within 48 hours. Proposed improvements for clinical accessibility and enhanced mutation localization.",
+      techStack: ["Python", "Random Forest", "gReLU", "Borzoi", "Genomics"]
+    },
+    {
       title: "Rainwater System Design",
       subtitle: "UTEK & Ontario Engineering Competition (OEC)",
       period: "Nov 2023 – Jan 2024",
@@ -92,7 +93,7 @@ export const EngineeringChallenges = () => {
             Engineering Challenges
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Real-world problems solved using machine learning engineering approaches and methodologies.
+            Real-world problems solved using AI and machine learning approaches through hackathons and competitions.
           </p>
         </div>
 
