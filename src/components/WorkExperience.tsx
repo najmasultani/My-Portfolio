@@ -6,55 +6,67 @@ import { Calendar, MapPin } from "lucide-react";
 export const WorkExperience = () => {
   const experiences = [
     {
-      title: "ML Engineering Intern",
-      company: "TechCorp AI",
-      location: "San Francisco, CA",
-      period: "Jun 2024 - Aug 2024",
-      type: "Internship",
-      description: "Developed and deployed machine learning models for real-time recommendation systems, improving user engagement by 25%.",
+      title: "AI Engineering PEY Intern",
+      company: "Ontario Power Generation",
+      location: "Pickering, ON",
+      period: "May 2025 – Present",
+      type: "PEY Co-op",
+      description: "Supported the Monitoring and Diagnostic Centre team by applying AI to monitor thousands of station alarms, reduce unplanned downtime, and help optimize maintenance budgets through early fault detection.",
       achievements: [
-        "Built end-to-end ML pipeline using PyTorch and FastAPI",
-        "Implemented A/B testing framework for model evaluation",
-        "Reduced model inference time by 40% through optimization",
-        "Collaborated with cross-functional teams on MLOps practices"
+        "Built Advanced Pattern Recognition (APR) models in AVEVA using C# to detect early signs of equipment failure",
+        "Automated data workflows in Python and analyzed time-series trends using Seeq",
+        "Enabled real-time visibility into equipment conditions to help prioritize maintenance tasks"
       ],
-      technologies: ["Python", "PyTorch", "FastAPI", "Docker", "AWS", "MLflow"]
+      technologies: ["Python", "C#", "AVEVA", "Seeq"]
     },
     {
-      title: "Data Science Research Assistant",
-      company: "University ML Lab",
-      location: "Remote",
-      period: "Jan 2024 - Present",
+      title: "Research Assistant",
+      company: "Cognitive Engineering Laboratory (CEL) - University of Toronto",
+      location: "Toronto, ON",
+      period: "Sep 2024 – Apr 2025",
       type: "Research",
-      description: "Conducting research on distributed machine learning systems and model optimization techniques under faculty supervision.",
+      description: "Contributed to a research project focused on improving the design and use of Small Modular Reactors (SMRs) through human performance research.",
       achievements: [
-        "Published paper on federated learning optimization",
-        "Developed novel quantization techniques for transformer models",
-        "Mentored 3 undergraduate students on ML projects",
-        "Presented findings at 2 academic conferences"
+        "Developed expertise through training resources, practice, and simulation stress testing",
+        "Provided input on training materials, procedures, operator interfaces, and experiment design"
       ],
-      technologies: ["TensorFlow", "Hugging Face", "Distributed Training", "Model Quantization", "Research"]
+      technologies: ["Research", "Human Performance", "SMR Design"]
     },
     {
-      title: "Software Engineering Intern",
-      company: "DataFlow Solutions",
-      location: "Austin, TX",
-      period: "May 2023 - Aug 2023",
-      type: "Internship",
-      description: "Built data processing pipelines and contributed to the development of analytics dashboards for enterprise clients.",
+      title: "Performance Improvement Intern",
+      company: "Ontario Power Generation",
+      location: "Bowmanville, ON",
+      period: "May – Aug 2024",
+      type: "Co-op",
+      description: "Supported a fleet-wide project focused on improving data collection and analysis for better operational insights.",
       achievements: [
-        "Designed ETL pipelines processing 1M+ records daily",
-        "Implemented real-time data validation and monitoring",
-        "Reduced data processing time by 60% through optimization",
-        "Created automated testing suite for data quality assurance"
+        "Created Gantt charts in Excel, wrote project statements, and prepared progress reports in Word",
+        "Designed and implemented Power BI dashboards and used SQL for data querying",
+        "Developed custom apps in Power Apps and used Power Automate to streamline workflows"
       ],
-      technologies: ["Python", "Apache Airflow", "PostgreSQL", "React", "AWS S3", "Great Expectations"]
+      technologies: ["Power BI", "SQL", "Excel", "Power Apps", "Power Automate"]
+    },
+    {
+      title: "Research Assistant",
+      company: "Women's Multicultural Resources & Counselling Centre",
+      location: "Ajax, ON",
+      period: "Jun-Aug 2022",
+      type: "Research",
+      description: "Conducted research on challenges faced by minority women in Durham Region to inform support strategies.",
+      achievements: [
+        "Authored 15 detailed reports with strong data analysis and formatting skills",
+        "Promoted findings through social media campaigns and team presentations",
+        "Collaborated with stakeholders to improve representation and resource allocation"
+      ],
+      technologies: ["Data Analysis", "Report Writing", "Social Media", "Research"]
     }
   ];
 
   const getTypeColor = (type: string) => {
     switch (type) {
-      case "Internship":
+      case "PEY Co-op":
+        return "bg-blue-600/20 text-blue-300 border-blue-500/30";
+      case "Co-op":
         return "bg-blue-600/20 text-blue-300 border-blue-500/30";
       case "Research":
         return "bg-green-600/20 text-green-300 border-green-500/30";
@@ -71,7 +83,7 @@ export const WorkExperience = () => {
             Work Experience
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Professional experience in machine learning, data science, and software engineering roles.
+            Professional experience in AI engineering, data science, and research roles.
           </p>
         </div>
 
