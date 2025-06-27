@@ -31,6 +31,7 @@ export const Hero = () => {
             variant="outline" 
             size="lg"
             className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-3 text-lg font-semibold rounded-full transition-all duration-300"
+            onClick={() => window.open("https://drive.google.com/file/d/1ktMkbTANNMlGT7JwsqgjcyVV3GOSJwKi/view?usp=sharing", "_blank")}
           >
             Download Resume
           </Button>
