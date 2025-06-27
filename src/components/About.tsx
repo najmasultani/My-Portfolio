@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -66,28 +65,28 @@ export const About = () => {
                   </div>
                 </div>
 
-                <div className="flex gap-4 pt-4">
+                <div className="flex flex-col sm:flex-row gap-3 pt-4">
                   <Button 
-                    className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
+                    className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 w-full sm:w-auto"
                     onClick={() => window.open("https://drive.google.com/file/d/1ktMkbTANNMlGT7JwsqgjcyVV3GOSJwKi/view?usp=sharing", "_blank")}
                   >
                     Download Resume
                   </Button>
                   <Button 
                     variant="outline" 
-                    className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white"
+                    className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white w-full sm:w-auto min-w-0"
                     onClick={() => window.open("https://github.com/najmasultani", "_blank")}
                   >
-                    <Github className="w-4 h-4 mr-2" />
-                    GitHub
+                    <Github className="w-4 h-4 mr-2 flex-shrink-0" />
+                    <span className="truncate">GitHub</span>
                   </Button>
                   <Button 
                     variant="outline" 
-                    className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white"
+                    className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white w-full sm:w-auto min-w-0"
                     onClick={() => window.open("https://www.linkedin.com/in/najmasultani", "_blank")}
                   >
-                    <Linkedin className="w-4 h-4 mr-2" />
-                    LinkedIn
+                    <Linkedin className="w-4 h-4 mr-2 flex-shrink-0" />
+                    <span className="truncate">LinkedIn</span>
                   </Button>
                 </div>
               </CardContent>
