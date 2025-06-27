@@ -130,18 +130,21 @@ export const FeaturedProjects = () => {
                   </ul>
                 </div>
 
-                <div className="flex gap-3 pt-4">
+                <div className="flex flex-col sm:flex-row gap-3 pt-4">
                   <Button 
                     size="sm" 
                     variant="outline" 
-                    className="flex-1 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white"
+                    className="w-full sm:flex-1 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white min-w-0"
                     onClick={() => window.open(project.github, '_blank')}
                   >
-                    <Github className="w-4 h-4 mr-2" />
-                    Code
+                    <Github className="w-4 h-4 mr-2 flex-shrink-0" />
+                    <span className="truncate">Code</span>
                   </Button>
-                  <Button size="sm" className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700">
-                    Live Demo
+                  <Button 
+                    size="sm" 
+                    className="w-full sm:flex-1 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 min-w-0"
+                  >
+                    <span className="truncate">Live Demo</span>
                   </Button>
                 </div>
               </CardContent>
