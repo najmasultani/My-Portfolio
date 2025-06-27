@@ -1,15 +1,9 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin } from "lucide-react";
+import { SkillsVisualization } from "./SkillsVisualization";
 
 export const About = () => {
-  const skills = {
-    "AI/ML Core": ["Supervised & Unsupervised Learning", "Deep Learning (Transformers, CNNs, RLHF)", "LLM Fine-Tuning (LLaMA 2, Mistral)", "Retrieval-Augmented Generation (RAG)", "Hyperparameter Tuning (Optuna)", "AI Agent Development"],
-    "AI Frameworks & Tools": ["LangChain", "LangGraph", "Hugging Face", "OpenAI API", "CrewAI", "MLflow", "Cursor IDE"],
-    "Programming & Deployment": ["Python", "C", "SQL", "FastAPI", "Docker", "Git", "Model Deployment"]
-  };
-
   const interests = [
     "Multi-Agent AI Systems",
     "Large Language Models (LLMs) & Foundation Models",
@@ -93,34 +87,9 @@ export const About = () => {
             </Card>
           </div>
 
-          {/* Skills Card */}
+          {/* Skills Visualization Card */}
           <div>
-            <Card className="bg-slate-800/60 border-slate-700 h-full">
-              <CardHeader>
-                <CardTitle className="text-white text-2xl">Technical Skills</CardTitle>
-                <CardDescription className="text-slate-300">
-                  Technologies and tools I work with
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                {Object.entries(skills).map(([category, skillList]) => (
-                  <div key={category}>
-                    <h4 className="text-purple-400 font-semibold mb-3">{category}</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {skillList.map((skill, index) => (
-                        <Badge 
-                          key={index} 
-                          variant="secondary" 
-                          className="bg-purple-600/20 text-purple-300 border-purple-500/30 text-xs"
-                        >
-                          {skill}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </CardContent>
-            </Card>
+            <SkillsVisualization />
           </div>
         </div>
       </div>
