@@ -15,4 +15,4 @@ It highlights my academic journey, technical skills, and hands-on work in applie
 ---
 
 ### 🌐 Live Site  
-[https://lovable.dev/projects/9c1b4d48-0f84-46ae-8a97-ba76e0c212dd]
+[https://ml-engineering-showcase-hub.lovable.app/]
