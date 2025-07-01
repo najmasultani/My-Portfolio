@@ -21,7 +21,7 @@ export const FeaturedProjects = () => {
       techStack: ["TabPFN", "Bayesian Optimization", "GPT-4", "Gradio", "KNN"],
       role: "ML Researcher & App Developer",
       github: "https://github.com/elorie-bernard-lacroix/SmartStudy",
-      demo: "#",
+      demo: "https://youtu.be/KeGaPgdvmUw",
       highlights: ["Built personalized study habit recommender system", "Generated advice based on similar student profiles", "Submitted authored research to NeurIPS 2025"]
     },
     {
@@ -143,6 +143,7 @@ export const FeaturedProjects = () => {
                   <Button 
                     size="sm" 
                     className="w-full sm:flex-1 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 min-w-0"
+                    onClick={() => window.open(project.demo, '_blank')}
                   >
                     <span className="truncate">Live Demo</span>
                   </Button>

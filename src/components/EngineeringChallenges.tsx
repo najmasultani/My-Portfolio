@@ -5,19 +5,6 @@ import { Badge } from "@/components/ui/badge";
 export const EngineeringChallenges = () => {
   const challenges = [
     {
-      title: "Scrapple AI",
-      subtitle: "The AI Collective & Lovable x Roam Hackathon",
-      period: "Jun 2025",
-      teamInfo: "Team of 4 • MVP using Lovable Framework & ChatGPT",
-      description: "Built a user-friendly MVP connecting restaurants with local gardeners to share compost and reduce food waste.",
-      problem: "Toronto generates over 90,000 tonnes of food waste annually, much of which ends up in landfills. Restaurants lack sustainable disposal options, while gardeners often don't have easy access to compost.",
-      approach: "Used Lovable's AI framework and ChatGPT with prompt engineering to create a conversational interface that coordinated compost pickup and delivery.",
-      model: "",
-      evaluation: "",
-      outcome: "Developed and demoed a working MVP that enabled compost listings and requests, simulating 30+ compost exchanges. Recognized by judges for real-world impact and usability.",
-      techStack: ["ChatGPT", "Lovable", "Prompt Engineering"]
-    },
-    {
       title: "RetainAI",
       subtitle: "UTEK – University of Toronto Engineering Kompetition",
       period: "Jan 2025",
@@ -43,19 +30,6 @@ export const EngineeringChallenges = () => {
       evaluation: "",
       outcome: "Achieved 88% accuracy; findings presented at Microsoft HQ and published through STEM Fellowship.",
       techStack: ["Python", "Neural Networks", "EEG/ECG", "ML"]
-    },
-    {
-      title: "Predicting Disease-Causing Mutations",
-      subtitle: "Bioinformatics Hackathon 2024",
-      period: "Jan 2024",
-      teamInfo: "Team of 10 • ML + Genomics Challenge",
-      description: "Built an ML model to predict Alzheimer's-linked mutations from genomic sequences, with a focus on women's health.",
-      problem: "Alzheimer's disproportionately affects women, yet genetic prediction tools are scarce and often inaccessible to clinicians.",
-      approach: "Used DSS NIAGADS and GenomeKit datasets filtered on p-values < 0.05. Engineered features from biological mutation patterns and trained a Random Forest combined with Borzoi (gReLU) for mutation effect prediction.",
-      model: "",
-      evaluation: "",
-      outcome: "Collaborated in a cross-functional team of 10 to build a working predictive model within 48 hours. Proposed improvements for clinical accessibility and enhanced mutation localization.",
-      techStack: ["Python", "Random Forest", "gReLU", "Borzoi", "Genomics"]
     },
     {
       title: "Rainwater System Design",
