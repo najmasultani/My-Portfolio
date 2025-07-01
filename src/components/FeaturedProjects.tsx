@@ -2,7 +2,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Github } from "lucide-react";
+import { Github, FileText } from "lucide-react";
 
 export const FeaturedProjects = () => {
   const projects = [
@@ -13,7 +13,9 @@ export const FeaturedProjects = () => {
       role: "Multi-Agent Developer",
       github: "https://github.com/najmasultani/AIScope",
       demo: "#",
-      highlights: ["Automated discovery and summarization of AI tools and papers", "Integrated live GitHub tracking and LLM-based analysis", "Hands-on testing workflow for code validation and comparison"]
+      highlights: ["Automated discovery and summarization of AI tools and papers", "Integrated live GitHub tracking and LLM-based analysis", "Hands-on testing workflow for code validation and comparison"],
+      showDemo: true,
+      showGithub: true
     },
     {
       title: "Smart Study",
@@ -22,7 +24,9 @@ export const FeaturedProjects = () => {
       role: "ML Researcher & App Developer",
       github: "https://github.com/elorie-bernard-lacroix/SmartStudy",
       demo: "https://youtu.be/KeGaPgdvmUw",
-      highlights: ["Built personalized study habit recommender system", "Generated advice based on similar student profiles", "Submitted authored research to NeurIPS 2025"]
+      highlights: ["Built personalized study habit recommender system", "Generated advice based on similar student profiles", "Submitted authored research to NeurIPS 2025"],
+      showDemo: true,
+      showGithub: true
     },
     {
       title: "Feedforward Neural Networks",
@@ -31,7 +35,9 @@ export const FeaturedProjects = () => {
       role: "ECE421 Project",
       github: "https://github.com/najmasultani/Machine-Learning-Projects/tree/main/IrisClassifier-FeedForwardNN",
       demo: "#",
-      highlights: ["Implemented 2-layer neural network from scratch using NumPy", "Trained and tuned on IRIS dataset with cross-entropy loss", "Built a PyTorch MLP for FashionMNIST using nn.Linear and ReLU"]
+      highlights: ["Implemented 2-layer neural network from scratch using NumPy", "Trained and tuned on IRIS dataset with cross-entropy loss", "Built a PyTorch MLP for FashionMNIST using nn.Linear and ReLU"],
+      showDemo: false,
+      showGithub: true
     },
     {
       title: "RNNs & Reinforcement Learning",
@@ -40,16 +46,21 @@ export const FeaturedProjects = () => {
       role: "ECE421 Project",
       github: "https://github.com/najmasultani/Machine-Learning-Projects/tree/main/Pocket%20Algorithm%20and%20Linear%20Regression",
       demo: "#",
-      highlights: ["Implemented vanilla RNN and LSTM for the Adding Problem", "Built Value Iteration and Q-Learning agents for GridWorld and Pacman", "Developed Approximate Q-Learning with feature-based representations"]
+      highlights: ["Implemented vanilla RNN and LSTM for the Adding Problem", "Built Value Iteration and Q-Learning agents for GridWorld and Pacman", "Developed Approximate Q-Learning with feature-based representations"],
+      showDemo: false,
+      showGithub: true
     },
     {
       title: "PlastiSorter",
       description: "Plastic Sorting System – Praxis III Engineering Project. Led development of an automated plastic sorter to address waste management in Ghana, delivering a functional prototype.",
       techStack: ["C++", "Arduino", "CAD"],
       role: "Team Lead & Embedded Developer",
-      github: "#",
+      onePager: "https://drive.google.com/file/d/1h9B5bLTGRZSHGI-k5HF7gHRiU1XmrRle/view?usp=sharing",
       demo: "#",
-      highlights: ["Programmed sorting logic to improve identification accuracy", "Delivered working prototype aligned with sustainability goals", "Authored technical design dossier and lab notebook"]
+      highlights: ["Programmed sorting logic to improve identification accuracy", "Delivered working prototype aligned with sustainability goals", "Authored technical design dossier and lab notebook"],
+      showDemo: false,
+      showGithub: false,
+      showOnePager: true
     },
     {
       title: "RL for Speech Disfluency",
@@ -58,16 +69,21 @@ export const FeaturedProjects = () => {
       role: "Data Coordinator & Research Contributor",
       github: "https://paperswithcode.com/search?q=author%3ANajma+Sultani",
       demo: "#",
-      highlights: ["Assisted with data collection and timeline management", "Helped structure research content for publication", "Project led by Prof. Michael Guerzhoy and team of 15"]
+      highlights: ["Assisted with data collection and timeline management", "Helped structure research content for publication", "Project led by Prof. Michael Guerzhoy and team of 15"],
+      showDemo: false,
+      showGithub: true
     },
     {
       title: "C-Sheet",
       description: "Training Device for Blind Curlers – Praxis II Project. Built an assistive training device integrating auditory feedback for accessibility in curling.",
       techStack: ["Python", "AutoCAD"],
       role: "Team Lead & Accessibility Engineer",
-      github: "#",
+      onePager: "https://drive.google.com/file/d/1d9FVKJSo4YGBy6YEZUcza2u4v7BfXMuS/view?usp=sharing",
       demo: "#",
-      highlights: ["Led 5-person team from concept to prototype", "Focused on user-centric design for visually impaired users", "Integrated community feedback into design iteration"]
+      highlights: ["Led 5-person team from concept to prototype", "Focused on user-centric design for visually impaired users", "Integrated community feedback into design iteration"],
+      showDemo: false,
+      showGithub: false,
+      showOnePager: true
     },
     {
       title: "Vision Vapor Stopper",
@@ -76,7 +92,9 @@ export const FeaturedProjects = () => {
       role: "Team Lead & Product Designer",
       github: "#",
       demo: "#",
-      highlights: ["Directed timeline and planning across full project lifecycle", "Prioritized user needs and design feasibility", "Delivered final prototype and design report"]
+      highlights: ["Directed timeline and planning across full project lifecycle", "Prioritized user needs and design feasibility", "Delivered final prototype and design report"],
+      showDemo: false,
+      showGithub: true
     }
   ];
 
@@ -131,22 +149,37 @@ export const FeaturedProjects = () => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-3 pt-4">
-                  <Button 
-                    size="sm" 
-                    variant="outline" 
-                    className="w-full sm:flex-1 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white min-w-0"
-                    onClick={() => window.open(project.github, '_blank')}
-                  >
-                    <Github className="w-4 h-4 mr-2 flex-shrink-0" />
-                    <span className="truncate">Code</span>
-                  </Button>
-                  <Button 
-                    size="sm" 
-                    className="w-full sm:flex-1 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 min-w-0"
-                    onClick={() => window.open(project.demo, '_blank')}
-                  >
-                    <span className="truncate">Live Demo</span>
-                  </Button>
+                  {project.showOnePager && (
+                    <Button 
+                      size="sm" 
+                      variant="outline" 
+                      className="w-full sm:flex-1 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white min-w-0"
+                      onClick={() => window.open(project.onePager, '_blank')}
+                    >
+                      <FileText className="w-4 h-4 mr-2 flex-shrink-0" />
+                      <span className="truncate">One-Pager</span>
+                    </Button>
+                  )}
+                  {project.showGithub && (
+                    <Button 
+                      size="sm" 
+                      variant="outline" 
+                      className="w-full sm:flex-1 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white min-w-0"
+                      onClick={() => window.open(project.github, '_blank')}
+                    >
+                      <Github className="w-4 h-4 mr-2 flex-shrink-0" />
+                      <span className="truncate">Code</span>
+                    </Button>
+                  )}
+                  {project.showDemo && (
+                    <Button 
+                      size="sm" 
+                      className="w-full sm:flex-1 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 min-w-0"
+                      onClick={() => window.open(project.demo, '_blank')}
+                    >
+                      <span className="truncate">Live Demo</span>
+                    </Button>
+                  )}
                 </div>
               </CardContent>
             </Card>

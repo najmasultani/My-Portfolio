@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -28,7 +29,8 @@ export const Hackathons = () => {
       techStack: ["Bolt.new", "Supabase", "Gemini AI", "Netlify", "Figma"],
       github: "https://github.com/najmasultani/FirstYearStarter",
       demo: "https://youtu.be/0dTDqzD3mrM",
-      devpost: "https://devpost.com/software/first-year-starter-your-smart-university-guide?ref_content=user-portfolio&ref_feature=in_progress"
+      devpost: "https://devpost.com/software/first-year-starter-your-smart-university-guide?ref_content=user-portfolio&ref_feature=in_progress",
+      showDemo: true
     },
     {
       title: "Scrapple AI",
@@ -51,7 +53,8 @@ export const Hackathons = () => {
       techStack: ["ChatGPT", "Lovable", "Prompt Engineering"],
       github: "https://github.com/najmasultani/Scrapple",
       demo: "https://youtu.be/fvt4YJSmd5k",
-      devpost: "https://devpost.com/software/scrapple?ref_content=user-portfolio&ref_feature=in_progress"
+      devpost: "https://devpost.com/software/scrapple?ref_content=user-portfolio&ref_feature=in_progress",
+      showDemo: true
     },
     {
       title: "Predicting Disease-Causing Mutations",
@@ -74,7 +77,8 @@ export const Hackathons = () => {
       techStack: ["Python", "Random Forest", "gReLU", "Borzoi", "Genomics"],
       github: "https://github.com/hackbio-ca/predicting-disease-causing-mutations",
       demo: "https://laurenaltomare8.wixstudio.com/tbh24",
-      devpost: "https://devpost.com/software/predicing-disease-causing-mutations"
+      devpost: "https://devpost.com/software/predicing-disease-causing-mutations",
+      showDemo: false
     }
   ];
 
@@ -165,14 +169,16 @@ export const Hackathons = () => {
                       <Github className="w-4 h-4 mr-2 flex-shrink-0" />
                       <span className="truncate">GitHub</span>
                     </Button>
-                    <Button 
-                      size="sm" 
-                      className="w-full sm:flex-1 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 min-w-0"
-                      onClick={() => window.open(hackathon.demo, '_blank')}
-                    >
-                      <Play className="w-4 h-4 mr-2 flex-shrink-0" />
-                      <span className="truncate">Demo Video</span>
-                    </Button>
+                    {hackathon.showDemo && (
+                      <Button 
+                        size="sm" 
+                        className="w-full sm:flex-1 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 min-w-0"
+                        onClick={() => window.open(hackathon.demo, '_blank')}
+                      >
+                        <Play className="w-4 h-4 mr-2 flex-shrink-0" />
+                        <span className="truncate">Demo Video</span>
+                      </Button>
+                    )}
                   </div>
                 </div>
               </CardContent>
