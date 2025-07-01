@@ -1,7 +1,6 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { award, zap, settings, users } from "lucide-react";
+import { Award, Zap, Settings, Users } from "lucide-react";
 
 export const EngineeringChallenges = () => {
   const challenges = [
