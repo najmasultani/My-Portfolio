@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -86,7 +85,7 @@ export const Hackathons = () => {
     <section id="hackathons" className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-50 mb-4">
             Hackathons
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
@@ -100,10 +99,10 @@ export const Hackathons = () => {
               <CardHeader>
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                   <div className="flex-1">
-                    <CardTitle className="text-white text-2xl mb-2">
+                    <CardTitle className="text-slate-50 text-2xl mb-2">
                       🎓 {hackathon.title}
                     </CardTitle>
-                    <CardDescription className="text-lg text-purple-400 font-semibold mb-2">
+                    <CardDescription className="text-lg text-teal-400 font-semibold mb-2">
                       {hackathon.subtitle}
                     </CardDescription>
                     <div className="flex flex-wrap items-center gap-4 text-slate-300 mb-4">
@@ -114,7 +113,7 @@ export const Hackathons = () => {
                     
                     {/* Challenge Tracks */}
                     <div className="mb-4">
-                      <h4 className="text-purple-400 font-semibold mb-2">Challenge Tracks Entered:</h4>
+                      <h4 className="text-teal-400 font-semibold mb-2">Challenge Tracks Entered:</h4>
                       <div className="space-y-1">
                         {hackathon.challengeTracks.map((track, trackIndex) => (
                           <div key={trackIndex} className="flex items-center text-slate-300 text-sm">
@@ -129,7 +128,7 @@ export const Hackathons = () => {
                 
                 <div className="flex flex-wrap gap-2 mt-4">
                   {hackathon.techStack.map((tech, techIndex) => (
-                    <Badge key={techIndex} variant="outline" className="border-purple-400 text-purple-300">
+                    <Badge key={techIndex} variant="outline" className="border-teal-400 text-teal-300">
                       {tech}
                     </Badge>
                   ))}
@@ -139,7 +138,7 @@ export const Hackathons = () => {
                 <div className="space-y-6">
                   {/* Key Features */}
                   <div>
-                    <h4 className="text-purple-400 font-semibold mb-3">Key Features:</h4>
+                    <h4 className="text-teal-400 font-semibold mb-3">Key Features:</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                       {hackathon.keyFeatures.map((feature, featureIndex) => (
                         <div key={featureIndex} className="text-slate-300 text-sm">
@@ -150,33 +149,33 @@ export const Hackathons = () => {
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="flex flex-col sm:flex-row gap-3 pt-4">
+                  <div className="grid grid-cols-2 gap-3">
                     <Button 
                       size="sm" 
                       variant="outline" 
-                      className="w-full sm:flex-1 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white min-w-0"
+                      className="border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-slate-900 rounded-xl transition-all duration-300 hover:shadow-lg"
                       onClick={() => window.open(hackathon.devpost, '_blank')}
                     >
-                      <ExternalLink className="w-4 h-4 mr-2 flex-shrink-0" />
-                      <span className="truncate">Devpost</span>
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      Devpost
                     </Button>
                     <Button 
                       size="sm" 
                       variant="outline" 
-                      className="w-full sm:flex-1 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white min-w-0"
+                      className="border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-slate-900 rounded-xl transition-all duration-300 hover:shadow-lg"
                       onClick={() => window.open(hackathon.github, '_blank')}
                     >
-                      <Github className="w-4 h-4 mr-2 flex-shrink-0" />
-                      <span className="truncate">GitHub</span>
+                      <Github className="w-4 h-4 mr-2" />
+                      GitHub
                     </Button>
                     {hackathon.showDemo && (
                       <Button 
                         size="sm" 
-                        className="w-full sm:flex-1 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 min-w-0"
+                        className="col-span-2 bg-gradient-to-r from-teal-500 to-indigo-600 hover:from-teal-600 hover:to-indigo-700 rounded-xl transition-all duration-300 hover:shadow-lg"
                         onClick={() => window.open(hackathon.demo, '_blank')}
                       >
-                        <Play className="w-4 h-4 mr-2 flex-shrink-0" />
-                        <span className="truncate">Demo Video</span>
+                        <Play className="w-4 h-4 mr-2" />
+                        Demo Video
                       </Button>
                     )}
                   </div>

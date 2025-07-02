@@ -20,7 +20,7 @@ export const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <h1 className="text-xl font-bold text-white">Najma Sultani Portfolio</h1>
+            <h1 className="text-xl font-bold text-slate-50">Najma Sultani Portfolio</h1>
           </div>
           
           {/* Desktop Navigation */}
@@ -30,7 +30,7 @@ export const Navigation = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-slate-300 hover:text-purple-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                  className="text-slate-300 hover:text-teal-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
                 >
                   {item.name}
                 </a>
@@ -61,7 +61,7 @@ export const Navigation = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-slate-300 hover:text-purple-400 block px-3 py-2 rounded-md text-base font-medium"
+                  className="text-slate-300 hover:text-teal-400 block px-3 py-2 rounded-md text-base font-medium"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
