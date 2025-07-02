@@ -2,11 +2,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin } from "lucide-react";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export const About = () => {
-  const { ref, isVisible } = useScrollAnimation(0.2);
-
   const skills = {
     "AI/ML Core": ["Supervised & Unsupervised Learning", "Deep Learning (Transformers, CNNs, RLHF)", "LLM Fine-Tuning (LLaMA 2, Mistral)", "Retrieval-Augmented Generation (RAG)", "Hyperparameter Tuning (Optuna)", "AI Agent Development"],
     "AI Frameworks & Tools": ["LangChain", "LangGraph", "Hugging Face", "OpenAI API", "CrewAI", "MLflow", "Cursor IDE"],
@@ -27,12 +24,7 @@ export const About = () => {
   return (
     <section id="about" className="py-20 px-4 bg-slate-800/30">
       <div className="max-w-7xl mx-auto">
-        <div 
-          ref={ref}
-          className={`text-center mb-16 transition-all duration-1000 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
-        >
+        <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             About
           </h2>
@@ -41,12 +33,10 @@ export const About = () => {
           </p>
         </div>
 
-        <div className={`grid grid-cols-1 lg:grid-cols-3 gap-8 transition-all duration-1000 delay-300 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* About Me Card */}
           <div className="lg:col-span-2">
-            <Card className="bg-slate-800/60 border-slate-700 h-full hover:bg-slate-800/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-purple-500/10">
+            <Card className="bg-slate-800/60 border-slate-700 h-full">
               <CardHeader>
                 <CardTitle className="text-white text-2xl">My Journey</CardTitle>
               </CardHeader>
@@ -77,28 +67,25 @@ export const About = () => {
 
                 <div className="flex flex-col sm:flex-row gap-3 pt-4">
                   <Button 
-                    className="group bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 w-full sm:w-auto transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                    className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 w-full sm:w-auto"
                     onClick={() => window.open("https://drive.google.com/file/d/1ktMkbTANNMlGT7JwsqgjcyVV3GOSJwKi/view?usp=sharing", "_blank")}
                   >
-                    <span className="relative">
-                      Download Resume
-                      <span className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded"></span>
-                    </span>
+                    Download Resume
                   </Button>
                   <Button 
                     variant="outline" 
-                    className="group border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white w-full sm:w-auto min-w-0 transition-all duration-300 hover:scale-105"
+                    className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white w-full sm:w-auto min-w-0"
                     onClick={() => window.open("https://github.com/najmasultani", "_blank")}
                   >
-                    <Github className="w-4 h-4 mr-2 flex-shrink-0 group-hover:rotate-12 transition-transform duration-300" />
+                    <Github className="w-4 h-4 mr-2 flex-shrink-0" />
                     <span className="truncate">GitHub</span>
                   </Button>
                   <Button 
                     variant="outline" 
-                    className="group border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white w-full sm:w-auto min-w-0 transition-all duration-300 hover:scale-105"
+                    className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white w-full sm:w-auto min-w-0"
                     onClick={() => window.open("https://www.linkedin.com/in/najmasultani", "_blank")}
                   >
-                    <Linkedin className="w-4 h-4 mr-2 flex-shrink-0 group-hover:-rotate-12 transition-transform duration-300" />
+                    <Linkedin className="w-4 h-4 mr-2 flex-shrink-0" />
                     <span className="truncate">LinkedIn</span>
                   </Button>
                 </div>
@@ -108,7 +95,7 @@ export const About = () => {
 
           {/* Skills Card */}
           <div>
-            <Card className="bg-slate-800/60 border-slate-700 h-full hover:bg-slate-800/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-purple-500/10">
+            <Card className="bg-slate-800/60 border-slate-700 h-full">
               <CardHeader>
                 <CardTitle className="text-white text-2xl">Technical Skills</CardTitle>
                 <CardDescription className="text-slate-300">

@@ -58,7 +58,7 @@ export const EngineeringChallenges = () => {
     <section id="challenges" className="py-20 px-4 bg-slate-800/30">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-50 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Engineering Challenges
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
@@ -72,12 +72,12 @@ export const EngineeringChallenges = () => {
               <CardHeader className="pb-4">
                 <div className="flex items-start justify-between mb-3">
                   <div className="text-4xl">{challenge.icon}</div>
-                  <Badge variant="outline" className="border-teal-400 text-teal-300 bg-teal-400/10">
+                  <Badge variant="outline" className="border-green-400 text-green-300 bg-green-400/10">
                     {challenge.outcome}
                   </Badge>
                 </div>
-                <CardTitle className="text-slate-50 text-xl mb-2">{challenge.projectTitle}</CardTitle>
-                <CardDescription className="text-teal-400 font-semibold mb-2">
+                <CardTitle className="text-white text-xl mb-2">{challenge.projectTitle}</CardTitle>
+                <CardDescription className="text-purple-400 font-semibold mb-2">
                   {challenge.eventName}
                 </CardDescription>
                 <p className="text-slate-400 text-sm mb-3">📅 {challenge.date}</p>
@@ -94,14 +94,14 @@ export const EngineeringChallenges = () => {
                   </div>
                   
                   <div className="bg-slate-700/50 p-4 rounded-lg">
-                    <h4 className="text-sky-400 font-semibold mb-2 flex items-center">
+                    <h4 className="text-blue-400 font-semibold mb-2 flex items-center">
                       🔧 Approach
                     </h4>
                     <p className="text-slate-300 text-sm">{challenge.approach}</p>
                   </div>
                   
                   <div className="bg-slate-700/50 p-4 rounded-lg">
-                    <h4 className="text-teal-400 font-semibold mb-2 flex items-center">
+                    <h4 className="text-green-400 font-semibold mb-2 flex items-center">
                       ✅ Outcome
                     </h4>
                     <p className="text-slate-300 text-sm">{challenge.result}</p>
@@ -109,12 +109,12 @@ export const EngineeringChallenges = () => {
                 </div>
                 
                 <div className="mt-4">
-                  <h4 className="text-violet-400 font-semibold mb-2 flex items-center">
+                  <h4 className="text-purple-400 font-semibold mb-2 flex items-center">
                     🛠️ Tools & Stack
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {challenge.techStack.map((tech, techIndex) => (
-                      <Badge key={techIndex} variant="secondary" className="bg-violet-600/20 text-violet-300 border-violet-500/30">
+                      <Badge key={techIndex} variant="secondary" className="bg-purple-600/20 text-purple-300 border-purple-500/30">
                         {tech}
                       </Badge>
                     ))}

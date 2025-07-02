@@ -1,12 +1,10 @@
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Github, ExternalLink, Play } from "lucide-react";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export const Hackathons = () => {
-  const { ref, isVisible } = useScrollAnimation(0.1);
-
   const hackathons = [
     {
       title: "First Year Starter",
@@ -87,13 +85,8 @@ export const Hackathons = () => {
   return (
     <section id="hackathons" className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
-        <div 
-          ref={ref}
-          className={`text-center mb-16 transition-all duration-1000 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-50 mb-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Hackathons
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
@@ -101,22 +94,16 @@ export const Hackathons = () => {
           </p>
         </div>
 
-        <div className={`space-y-8 transition-all duration-1000 delay-300 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}>
+        <div className="space-y-8">
           {hackathons.map((hackathon, index) => (
-            <Card 
-              key={index} 
-              className="bg-slate-800/60 border-slate-700 hover:bg-slate-800/80 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-teal-500/20 group"
-              style={{ animationDelay: `${index * 200}ms` }}
-            >
+            <Card key={index} className="bg-slate-800/60 border-slate-700 hover:bg-slate-800/80 transition-all duration-300">
               <CardHeader>
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                   <div className="flex-1">
-                    <CardTitle className="text-slate-50 text-2xl mb-2">
+                    <CardTitle className="text-white text-2xl mb-2">
                       🎓 {hackathon.title}
                     </CardTitle>
-                    <CardDescription className="text-lg text-teal-400 font-semibold mb-2">
+                    <CardDescription className="text-lg text-purple-400 font-semibold mb-2">
                       {hackathon.subtitle}
                     </CardDescription>
                     <div className="flex flex-wrap items-center gap-4 text-slate-300 mb-4">
@@ -127,7 +114,7 @@ export const Hackathons = () => {
                     
                     {/* Challenge Tracks */}
                     <div className="mb-4">
-                      <h4 className="text-teal-400 font-semibold mb-2">Challenge Tracks Entered:</h4>
+                      <h4 className="text-purple-400 font-semibold mb-2">Challenge Tracks Entered:</h4>
                       <div className="space-y-1">
                         {hackathon.challengeTracks.map((track, trackIndex) => (
                           <div key={trackIndex} className="flex items-center text-slate-300 text-sm">
@@ -142,7 +129,7 @@ export const Hackathons = () => {
                 
                 <div className="flex flex-wrap gap-2 mt-4">
                   {hackathon.techStack.map((tech, techIndex) => (
-                    <Badge key={techIndex} variant="outline" className="border-teal-400 text-teal-300">
+                    <Badge key={techIndex} variant="outline" className="border-purple-400 text-purple-300">
                       {tech}
                     </Badge>
                   ))}
@@ -152,7 +139,7 @@ export const Hackathons = () => {
                 <div className="space-y-6">
                   {/* Key Features */}
                   <div>
-                    <h4 className="text-teal-400 font-semibold mb-3">Key Features:</h4>
+                    <h4 className="text-purple-400 font-semibold mb-3">Key Features:</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                       {hackathon.keyFeatures.map((feature, featureIndex) => (
                         <div key={featureIndex} className="text-slate-300 text-sm">
@@ -163,36 +150,33 @@ export const Hackathons = () => {
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="grid grid-cols-2 gap-3">
+                  <div className="flex flex-col sm:flex-row gap-3 pt-4">
                     <Button 
                       size="sm" 
                       variant="outline" 
-                      className="group border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-slate-900 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105"
+                      className="w-full sm:flex-1 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white min-w-0"
                       onClick={() => window.open(hackathon.devpost, '_blank')}
                     >
-                      <ExternalLink className="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" />
-                      Devpost
+                      <ExternalLink className="w-4 h-4 mr-2 flex-shrink-0" />
+                      <span className="truncate">Devpost</span>
                     </Button>
                     <Button 
                       size="sm" 
                       variant="outline" 
-                      className="group border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-slate-900 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105"
+                      className="w-full sm:flex-1 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white min-w-0"
                       onClick={() => window.open(hackathon.github, '_blank')}
                     >
-                      <Github className="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" />
-                      GitHub
+                      <Github className="w-4 h-4 mr-2 flex-shrink-0" />
+                      <span className="truncate">GitHub</span>
                     </Button>
                     {hackathon.showDemo && (
                       <Button 
                         size="sm" 
-                        className="group col-span-2 bg-gradient-to-r from-teal-500 to-indigo-600 hover:from-teal-400 hover:to-indigo-500 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105"
+                        className="w-full sm:flex-1 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 min-w-0"
                         onClick={() => window.open(hackathon.demo, '_blank')}
                       >
-                        <Play className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform duration-300" />
-                        <span className="relative">
-                          Demo Video
-                          <span className="absolute inset-0 bg-gradient-to-r from-teal-300 to-indigo-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-xl"></span>
-                        </span>
+                        <Play className="w-4 h-4 mr-2 flex-shrink-0" />
+                        <span className="truncate">Demo Video</span>
                       </Button>
                     )}
                   </div>
