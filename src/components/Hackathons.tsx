@@ -150,11 +150,11 @@ export const Hackathons = () => {
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="flex flex-col sm:flex-row gap-3 pt-4">
+                  <div className="flex flex-wrap gap-3 pt-4">
                     <Button 
                       size="sm" 
                       variant="outline" 
-                      className="w-full sm:flex-1 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white min-w-0"
+                      className="flex-1 min-w-0 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white"
                       onClick={() => window.open(hackathon.devpost, '_blank')}
                     >
                       <ExternalLink className="w-4 h-4 mr-2 flex-shrink-0" />
@@ -163,7 +163,7 @@ export const Hackathons = () => {
                     <Button 
                       size="sm" 
                       variant="outline" 
-                      className="w-full sm:flex-1 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white min-w-0"
+                      className="flex-1 min-w-0 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white"
                       onClick={() => window.open(hackathon.github, '_blank')}
                     >
                       <Github className="w-4 h-4 mr-2 flex-shrink-0" />
@@ -172,7 +172,7 @@ export const Hackathons = () => {
                     {hackathon.showDemo && (
                       <Button 
                         size="sm" 
-                        className="w-full sm:flex-1 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 min-w-0"
+                        className="flex-1 min-w-0 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
                         onClick={() => window.open(hackathon.demo, '_blank')}
                       >
                         <Play className="w-4 h-4 mr-2 flex-shrink-0" />

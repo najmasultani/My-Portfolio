@@ -140,20 +140,20 @@ export const FeaturedProjects = () => {
                   <p className="text-sm text-purple-400 font-semibold mb-2">Key Highlights:</p>
                   <ul className="text-slate-300 text-sm space-y-1">
                     {project.highlights.map((highlight, highlightIndex) => (
-                      <li key={highlightIndex} className="flex items-center">
-                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-2"></div>
+                      <li key={highlightIndex} className="flex items-start">
+                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
                         {highlight}
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-3 pt-4">
+                <div className="flex flex-wrap gap-3 pt-4">
                   {project.showOnePager && (
                     <Button 
                       size="sm" 
                       variant="outline" 
-                      className="w-full sm:flex-1 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white min-w-0"
+                      className="flex-1 min-w-0 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white"
                       onClick={() => window.open(project.onePager, '_blank')}
                     >
                       <FileText className="w-4 h-4 mr-2 flex-shrink-0" />
@@ -164,7 +164,7 @@ export const FeaturedProjects = () => {
                     <Button 
                       size="sm" 
                       variant="outline" 
-                      className="w-full sm:flex-1 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white min-w-0"
+                      className="flex-1 min-w-0 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white"
                       onClick={() => window.open(project.github, '_blank')}
                     >
                       <Github className="w-4 h-4 mr-2 flex-shrink-0" />
@@ -174,7 +174,7 @@ export const FeaturedProjects = () => {
                   {project.showDemo && (
                     <Button 
                       size="sm" 
-                      className="w-full sm:flex-1 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 min-w-0"
+                      className="flex-1 min-w-0 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
                       onClick={() => window.open(project.demo, '_blank')}
                     >
                       <span className="truncate">Live Demo</span>
