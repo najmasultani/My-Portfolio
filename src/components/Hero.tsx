@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 export const Hero = () => {
   const [displayedText, setDisplayedText] = useState("");
   const [showSubtitle, setShowSubtitle] = useState(false);
+  const [showDescription, setShowDescription] = useState(false);
   const [showButtons, setShowButtons] = useState(false);
   const fullText = "Najma Sultani";
 
@@ -18,7 +19,8 @@ export const Hero = () => {
       } else {
         clearInterval(typingTimer);
         setTimeout(() => setShowSubtitle(true), 300);
-        setTimeout(() => setShowButtons(true), 600);
+        setTimeout(() => setShowDescription(true), 600);
+        setTimeout(() => setShowButtons(true), 900);
       }
     }, 100);
 
@@ -34,14 +36,23 @@ export const Hero = () => {
       </div>
       
       <div className="max-w-4xl mx-auto text-center relative z-10">
-        <div className="mb-8">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight" style={{color: '#F8FAFC'}}>
+        <div className="mb-12">
+          <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight" style={{color: '#F8FAFC'}}>
             {displayedText}
             <span className="animate-pulse">|</span>
-            <span className={`block bg-gradient-to-r from-teal-500 to-indigo-500 bg-clip-text text-transparent transition-opacity duration-500 ${showSubtitle ? 'opacity-100' : 'opacity-0'}`}>
-              AI & LLM Engineer
-            </span>
           </h1>
+          
+          <div className={`mb-6 transition-opacity duration-500 ${showSubtitle ? 'opacity-100' : 'opacity-0'}`}>
+            <h2 className="text-2xl md:text-3xl font-semibold bg-gradient-to-r from-teal-500 to-indigo-500 bg-clip-text text-transparent">
+              AI & LLM Engineer
+            </h2>
+          </div>
+          
+          <div className={`transition-opacity duration-500 ${showDescription ? 'opacity-100' : 'opacity-0'}`}>
+            <p className="text-lg md:text-xl mb-8" style={{color: '#CBD5E1'}}>
+              Building intelligent systems that bridge cutting-edge AI research with real-world applications
+            </p>
+          </div>
         </div>
         
         <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 transition-all duration-700 transform ${showButtons ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
