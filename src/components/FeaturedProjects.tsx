@@ -1,9 +1,13 @@
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Github, FileText } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export const FeaturedProjects = () => {
+  const { ref, isVisible } = useScrollAnimation(0.1);
+
   const projects = [
     {
       title: "AI Scope",
@@ -100,7 +104,12 @@ export const FeaturedProjects = () => {
   return (
     <section id="projects" className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div 
+          ref={ref}
+          className={`text-center mb-16 transition-all duration-1000 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
+        >
           <h2 className="text-4xl md:text-5xl font-bold text-slate-50 mb-4">
             Featured Projects
           </h2>
@@ -109,11 +118,19 @@ export const FeaturedProjects = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 delay-300 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
           {projects.map((project, index) => (
-            <Card key={index} className="bg-slate-800/50 border-slate-700 hover:bg-slate-800/70 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+            <Card 
+              key={index} 
+              className="bg-slate-800/50 border-slate-700 hover:bg-slate-800/70 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-teal-500/20 group"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
               <CardHeader>
-                <CardTitle className="text-slate-50 text-xl mb-2">{project.title}</CardTitle>
+                <CardTitle className="text-slate-50 text-xl mb-2 group-hover:text-teal-400 transition-colors duration-300">
+                  {project.title}
+                </CardTitle>
                 <CardDescription className="text-slate-300 text-base leading-relaxed">
                   {project.description}
                 </CardDescription>
@@ -153,10 +170,10 @@ export const FeaturedProjects = () => {
                       <Button 
                         size="sm" 
                         variant="outline" 
-                        className="border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-slate-900 rounded-xl transition-all duration-300 hover:shadow-lg"
+                        className="group border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-slate-900 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105"
                         onClick={() => window.open(project.onePager, '_blank')}
                       >
-                        <FileText className="w-4 h-4 mr-2" />
+                        <FileText className="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" />
                         One-Pager
                       </Button>
                     )}
@@ -164,10 +181,10 @@ export const FeaturedProjects = () => {
                       <Button 
                         size="sm" 
                         variant="outline" 
-                        className="border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-slate-900 rounded-xl transition-all duration-300 hover:shadow-lg"
+                        className="group border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-slate-900 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105"
                         onClick={() => window.open(project.github, '_blank')}
                       >
-                        <Github className="w-4 h-4 mr-2" />
+                        <Github className="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" />
                         Code
                       </Button>
                     )}
@@ -175,10 +192,13 @@ export const FeaturedProjects = () => {
                   {project.showDemo && (
                     <Button 
                       size="sm" 
-                      className="bg-gradient-to-r from-teal-500 to-indigo-600 hover:from-teal-600 hover:to-indigo-700 rounded-xl transition-all duration-300 hover:shadow-lg"
+                      className="group bg-gradient-to-r from-teal-500 to-indigo-600 hover:from-teal-400 hover:to-indigo-500 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105"
                       onClick={() => window.open(project.demo, '_blank')}
                     >
-                      Live Demo
+                      <span className="relative">
+                        Live Demo
+                        <span className="absolute inset-0 bg-gradient-to-r from-teal-300 to-indigo-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-xl"></span>
+                      </span>
                     </Button>
                   )}
                 </div>
