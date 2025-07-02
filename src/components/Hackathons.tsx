@@ -1,10 +1,12 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Github, ExternalLink, Play } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export const Hackathons = () => {
+  const { ref, isVisible } = useScrollAnimation();
+
   const hackathons = [
     {
       title: "First Year Starter",
@@ -83,41 +85,49 @@ export const Hackathons = () => {
   ];
 
   return (
-    <section id="hackathons" className="py-20 px-4">
+    <section id="hackathons" className="py-20 px-4" style={{backgroundColor: '#0F172A'}}>
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+        <div ref={ref} className={`text-center mb-16 transition-all duration-700 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{color: '#F8FAFC'}}>
             Hackathons
           </h2>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+          <p className="text-xl max-w-3xl mx-auto" style={{color: '#CBD5E1'}}>
             Innovation-driven projects built during competitive hackathons, showcasing rapid prototyping and creative problem-solving.
           </p>
         </div>
 
         <div className="space-y-8">
           {hackathons.map((hackathon, index) => (
-            <Card key={index} className="bg-slate-800/60 border-slate-700 hover:bg-slate-800/80 transition-all duration-300">
+            <Card 
+              key={index} 
+              className="border transition-all duration-300 transform hover:scale-[1.02] hover:shadow-xl group"
+              style={{
+                backgroundColor: 'rgba(30, 41, 59, 0.6)',
+                borderColor: '#1E293B',
+                borderRadius: '0.75rem'
+              }}
+            >
               <CardHeader>
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                   <div className="flex-1">
-                    <CardTitle className="text-white text-2xl mb-2">
+                    <CardTitle className="text-2xl mb-2" style={{color: '#F8FAFC'}}>
                       🎓 {hackathon.title}
                     </CardTitle>
-                    <CardDescription className="text-lg text-purple-400 font-semibold mb-2">
+                    <CardDescription className="text-lg font-semibold mb-2" style={{color: '#8B5CF6'}}>
                       {hackathon.subtitle}
                     </CardDescription>
-                    <div className="flex flex-wrap items-center gap-4 text-slate-300 mb-4">
+                    <div className="flex flex-wrap items-center gap-4 mb-4" style={{color: '#CBD5E1'}}>
                       <span className="text-sm">🏆 {hackathon.event}</span>
                       <span className="text-sm">📅 {hackathon.period}</span>
                     </div>
-                    <p className="text-slate-300 mb-4">{hackathon.description}</p>
+                    <p className="mb-4" style={{color: '#CBD5E1'}}>{hackathon.description}</p>
                     
                     {/* Challenge Tracks */}
                     <div className="mb-4">
-                      <h4 className="text-purple-400 font-semibold mb-2">Challenge Tracks Entered:</h4>
+                      <h4 className="font-semibold mb-2" style={{color: '#8B5CF6'}}>Challenge Tracks Entered:</h4>
                       <div className="space-y-1">
                         {hackathon.challengeTracks.map((track, trackIndex) => (
-                          <div key={trackIndex} className="flex items-center text-slate-300 text-sm">
+                          <div key={trackIndex} className="flex items-center text-sm" style={{color: '#CBD5E1'}}>
                             <span className="mr-2">✅</span>
                             {track}
                           </div>
@@ -129,7 +139,15 @@ export const Hackathons = () => {
                 
                 <div className="flex flex-wrap gap-2 mt-4">
                   {hackathon.techStack.map((tech, techIndex) => (
-                    <Badge key={techIndex} variant="outline" className="border-purple-400 text-purple-300">
+                    <Badge 
+                      key={techIndex} 
+                      variant="outline" 
+                      className="border transition-colors duration-200"
+                      style={{
+                        borderColor: '#8B5CF6',
+                        color: '#8B5CF6'
+                      }}
+                    >
                       {tech}
                     </Badge>
                   ))}
@@ -139,10 +157,10 @@ export const Hackathons = () => {
                 <div className="space-y-6">
                   {/* Key Features */}
                   <div>
-                    <h4 className="text-purple-400 font-semibold mb-3">Key Features:</h4>
+                    <h4 className="font-semibold mb-3" style={{color: '#8B5CF6'}}>Key Features:</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                       {hackathon.keyFeatures.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="text-slate-300 text-sm">
+                        <div key={featureIndex} className="text-sm" style={{color: '#CBD5E1'}}>
                           {feature}
                         </div>
                       ))}
@@ -154,7 +172,12 @@ export const Hackathons = () => {
                     <Button 
                       size="sm" 
                       variant="outline" 
-                      className="flex-1 min-w-0 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white"
+                      className="flex-1 min-w-0 border-2 transition-all duration-300 hover:shadow-lg"
+                      style={{
+                        borderRadius: '0.75rem',
+                        borderColor: '#38BDF8',
+                        color: '#38BDF8'
+                      }}
                       onClick={() => window.open(hackathon.devpost, '_blank')}
                     >
                       <ExternalLink className="w-4 h-4 mr-2 flex-shrink-0" />
@@ -163,7 +186,12 @@ export const Hackathons = () => {
                     <Button 
                       size="sm" 
                       variant="outline" 
-                      className="flex-1 min-w-0 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white"
+                      className="flex-1 min-w-0 border-2 transition-all duration-300 hover:shadow-lg"
+                      style={{
+                        borderRadius: '0.75rem',
+                        borderColor: '#38BDF8',
+                        color: '#38BDF8'
+                      }}
                       onClick={() => window.open(hackathon.github, '_blank')}
                     >
                       <Github className="w-4 h-4 mr-2 flex-shrink-0" />
@@ -172,7 +200,8 @@ export const Hackathons = () => {
                     {hackathon.showDemo && (
                       <Button 
                         size="sm" 
-                        className="flex-1 min-w-0 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
+                        className="flex-1 min-w-0 bg-gradient-to-r from-teal-500 to-indigo-500 hover:from-teal-600 hover:to-indigo-600 transition-all duration-300 hover:shadow-lg"
+                        style={{borderRadius: '0.75rem'}}
                         onClick={() => window.open(hackathon.demo, '_blank')}
                       >
                         <Play className="w-4 h-4 mr-2 flex-shrink-0" />

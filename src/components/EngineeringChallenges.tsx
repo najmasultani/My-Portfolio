@@ -1,8 +1,10 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Award, Zap, Settings, Users } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export const EngineeringChallenges = () => {
+  const { ref, isVisible } = useScrollAnimation();
+
   const challenges = [
     {
       eventName: "UTEK – University of Toronto Engineering Kompetition",
@@ -55,66 +57,91 @@ export const EngineeringChallenges = () => {
   ];
 
   return (
-    <section id="challenges" className="py-20 px-4 bg-slate-800/30">
+    <section id="challenges" className="py-20 px-4" style={{backgroundColor: '#1E293B'}}>
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+        <div ref={ref} className={`text-center mb-16 transition-all duration-700 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{color: '#F8FAFC'}}>
             Engineering Challenges
           </h2>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+          <p className="text-xl max-w-3xl mx-auto" style={{color: '#CBD5E1'}}>
             Real-world problems solved using AI and machine learning approaches through competitions and challenges.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {challenges.map((challenge, index) => (
-            <Card key={index} className="bg-slate-800/60 border-slate-700 hover:bg-slate-800/80 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+            <Card 
+              key={index} 
+              className="border transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+              style={{
+                backgroundColor: 'rgba(15, 23, 42, 0.6)',
+                borderColor: '#1E293B',
+                borderRadius: '0.75rem'
+              }}
+            >
               <CardHeader className="pb-4">
                 <div className="flex items-start justify-between mb-3">
                   <div className="text-4xl">{challenge.icon}</div>
-                  <Badge variant="outline" className="border-green-400 text-green-300 bg-green-400/10">
+                  <Badge 
+                    variant="outline" 
+                    className="border bg-opacity-10"
+                    style={{
+                      borderColor: '#14B8A6',
+                      color: '#14B8A6',
+                      backgroundColor: 'rgba(20, 184, 166, 0.1)'
+                    }}
+                  >
                     {challenge.outcome}
                   </Badge>
                 </div>
-                <CardTitle className="text-white text-xl mb-2">{challenge.projectTitle}</CardTitle>
-                <CardDescription className="text-purple-400 font-semibold mb-2">
+                <CardTitle className="text-xl mb-2" style={{color: '#F8FAFC'}}>{challenge.projectTitle}</CardTitle>
+                <CardDescription className="font-semibold mb-2" style={{color: '#8B5CF6'}}>
                   {challenge.eventName}
                 </CardDescription>
-                <p className="text-slate-400 text-sm mb-3">📅 {challenge.date}</p>
-                <p className="text-slate-300 text-base">{challenge.summary}</p>
+                <p className="text-sm mb-3" style={{color: '#CBD5E1'}}>📅 {challenge.date}</p>
+                <p className="text-base" style={{color: '#CBD5E1'}}>{challenge.summary}</p>
               </CardHeader>
               
               <CardContent className="space-y-4">
                 <div className="space-y-4">
-                  <div className="bg-slate-700/50 p-4 rounded-lg">
-                    <h4 className="text-red-400 font-semibold mb-2 flex items-center">
+                  <div className="p-4 rounded-lg" style={{backgroundColor: 'rgba(30, 41, 59, 0.5)'}}>
+                    <h4 className="font-semibold mb-2 flex items-center" style={{color: '#EF4444'}}>
                       🧠 Problem
                     </h4>
-                    <p className="text-slate-300 text-sm">{challenge.problem}</p>
+                    <p className="text-sm" style={{color: '#CBD5E1'}}>{challenge.problem}</p>
                   </div>
                   
-                  <div className="bg-slate-700/50 p-4 rounded-lg">
-                    <h4 className="text-blue-400 font-semibold mb-2 flex items-center">
+                  <div className="p-4 rounded-lg" style={{backgroundColor: 'rgba(30, 41, 59, 0.5)'}}>
+                    <h4 className="font-semibold mb-2 flex items-center" style={{color: '#3B82F6'}}>
                       🔧 Approach
                     </h4>
-                    <p className="text-slate-300 text-sm">{challenge.approach}</p>
+                    <p className="text-sm" style={{color: '#CBD5E1'}}>{challenge.approach}</p>
                   </div>
                   
-                  <div className="bg-slate-700/50 p-4 rounded-lg">
-                    <h4 className="text-green-400 font-semibold mb-2 flex items-center">
+                  <div className="p-4 rounded-lg" style={{backgroundColor: 'rgba(30, 41, 59, 0.5)'}}>
+                    <h4 className="font-semibold mb-2 flex items-center" style={{color: '#10B981'}}>
                       ✅ Outcome
                     </h4>
-                    <p className="text-slate-300 text-sm">{challenge.result}</p>
+                    <p className="text-sm" style={{color: '#CBD5E1'}}>{challenge.result}</p>
                   </div>
                 </div>
                 
                 <div className="mt-4">
-                  <h4 className="text-purple-400 font-semibold mb-2 flex items-center">
+                  <h4 className="font-semibold mb-2 flex items-center" style={{color: '#8B5CF6'}}>
                     🛠️ Tools & Stack
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {challenge.techStack.map((tech, techIndex) => (
-                      <Badge key={techIndex} variant="secondary" className="bg-purple-600/20 text-purple-300 border-purple-500/30">
+                      <Badge 
+                        key={techIndex} 
+                        variant="secondary" 
+                        className="border transition-colors duration-200"
+                        style={{
+                          backgroundColor: 'rgba(139, 92, 246, 0.1)',
+                          color: '#8B5CF6',
+                          borderColor: 'rgba(139, 92, 246, 0.3)'
+                        }}
+                      >
                         {tech}
                       </Badge>
                     ))}

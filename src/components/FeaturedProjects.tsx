@@ -1,10 +1,12 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Github, FileText } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export const FeaturedProjects = () => {
+  const { ref, isVisible } = useScrollAnimation();
+
   const projects = [
     {
       title: "AI Scope",
@@ -99,37 +101,54 @@ export const FeaturedProjects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 px-4">
+    <section id="projects" className="py-20 px-4" style={{backgroundColor: '#1E293B'}}>
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+        <div ref={ref} className={`text-center mb-16 transition-all duration-700 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{color: '#F8FAFC'}}>
             Featured Projects
           </h2>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+          <p className="text-xl max-w-3xl mx-auto" style={{color: '#CBD5E1'}}>
             A showcase of my AI and machine learning projects, from multi-agent systems to neural network implementations.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="bg-slate-800/50 border-slate-700 hover:bg-slate-800/70 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+            <Card 
+              key={index} 
+              className="border transition-all duration-300 transform hover:scale-105 hover:shadow-xl group"
+              style={{
+                backgroundColor: 'rgba(15, 23, 42, 0.8)',
+                borderColor: '#1E293B',
+                borderRadius: '0.75rem'
+              }}
+            >
               <CardHeader>
-                <CardTitle className="text-white text-xl mb-2">{project.title}</CardTitle>
-                <CardDescription className="text-slate-300 text-base leading-relaxed">
+                <CardTitle className="text-xl mb-2" style={{color: '#F8FAFC'}}>{project.title}</CardTitle>
+                <CardDescription className="text-base leading-relaxed" style={{color: '#CBD5E1'}}>
                   {project.description}
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div>
-                  <p className="text-sm text-purple-400 font-semibold mb-2">Role:</p>
-                  <p className="text-slate-300">{project.role}</p>
+                  <p className="text-sm font-semibold mb-2" style={{color: '#8B5CF6'}}>Role:</p>
+                  <p style={{color: '#CBD5E1'}}>{project.role}</p>
                 </div>
 
                 <div>
-                  <p className="text-sm text-purple-400 font-semibold mb-3">Tech Stack:</p>
+                  <p className="text-sm font-semibold mb-3" style={{color: '#8B5CF6'}}>Tech Stack:</p>
                   <div className="flex flex-wrap gap-2">
                     {project.techStack.map((tech, techIndex) => (
-                      <Badge key={techIndex} variant="secondary" className="bg-purple-600/20 text-purple-300 border-purple-500/30">
+                      <Badge 
+                        key={techIndex} 
+                        variant="secondary" 
+                        className="border transition-colors duration-200"
+                        style={{
+                          backgroundColor: 'rgba(139, 92, 246, 0.1)',
+                          color: '#8B5CF6',
+                          borderColor: 'rgba(139, 92, 246, 0.3)'
+                        }}
+                      >
                         {tech}
                       </Badge>
                     ))}
@@ -137,11 +156,11 @@ export const FeaturedProjects = () => {
                 </div>
 
                 <div>
-                  <p className="text-sm text-purple-400 font-semibold mb-2">Key Highlights:</p>
-                  <ul className="text-slate-300 text-sm space-y-1">
+                  <p className="text-sm font-semibold mb-2" style={{color: '#8B5CF6'}}>Key Highlights:</p>
+                  <ul className="text-sm space-y-1" style={{color: '#CBD5E1'}}>
                     {project.highlights.map((highlight, highlightIndex) => (
                       <li key={highlightIndex} className="flex items-start">
-                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
+                        <div className="w-1.5 h-1.5 rounded-full mr-2 mt-2 flex-shrink-0" style={{backgroundColor: '#8B5CF6'}}></div>
                         {highlight}
                       </li>
                     ))}
@@ -153,7 +172,12 @@ export const FeaturedProjects = () => {
                     <Button 
                       size="sm" 
                       variant="outline" 
-                      className="flex-1 min-w-0 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white"
+                      className="flex-1 min-w-0 border-2 transition-all duration-300 hover:shadow-lg"
+                      style={{
+                        borderRadius: '0.75rem',
+                        borderColor: '#38BDF8',
+                        color: '#38BDF8'
+                      }}
                       onClick={() => window.open(project.onePager, '_blank')}
                     >
                       <FileText className="w-4 h-4 mr-2 flex-shrink-0" />
@@ -164,7 +188,12 @@ export const FeaturedProjects = () => {
                     <Button 
                       size="sm" 
                       variant="outline" 
-                      className="flex-1 min-w-0 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white"
+                      className="flex-1 min-w-0 border-2 transition-all duration-300 hover:shadow-lg"
+                      style={{
+                        borderRadius: '0.75rem',
+                        borderColor: '#38BDF8',
+                        color: '#38BDF8'
+                      }}
                       onClick={() => window.open(project.github, '_blank')}
                     >
                       <Github className="w-4 h-4 mr-2 flex-shrink-0" />
@@ -174,7 +203,8 @@ export const FeaturedProjects = () => {
                   {project.showDemo && (
                     <Button 
                       size="sm" 
-                      className="flex-1 min-w-0 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
+                      className="flex-1 min-w-0 bg-gradient-to-r from-teal-500 to-indigo-500 hover:from-teal-600 hover:to-indigo-600 transition-all duration-300 hover:shadow-lg"
+                      style={{borderRadius: '0.75rem'}}
                       onClick={() => window.open(project.demo, '_blank')}
                     >
                       <span className="truncate">Live Demo</span>
