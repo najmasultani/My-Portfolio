@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin } from "lucide-react";
@@ -6,8 +5,8 @@ import { Calendar, MapPin } from "lucide-react";
 export const WorkExperience = () => {
   const experiences = [
     {
-      title: "AI Engineering PEY Intern",
-      company: "Ontario Power Generation",
+      title: "Data Science PEY Intern",
+      company: "Ontario Power Generation", 
       location: "Pickering, ON",
       period: "May 2025 – Present",
       type: "PEY Co-op",
@@ -17,7 +16,7 @@ export const WorkExperience = () => {
         "Automated data workflows in Python and analyzed time-series trends using Seeq",
         "Enabled real-time visibility into equipment conditions to help prioritize maintenance tasks"
       ],
-      technologies: ["Python", "C#", "AVEVA", "Seeq"]
+      technologies: ["Python", "C#", "AVEVA", "Seeq", "Machine Learning"]
     },
     {
       title: "Research Assistant",

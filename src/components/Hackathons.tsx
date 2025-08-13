@@ -9,6 +9,32 @@ export const Hackathons = () => {
 
   const hackathons = [
     {
+      title: "Tech Internship Roadmap Planner",
+      subtitle: "Personalized Internship Prep App", 
+      event: "Panda Hack 2025",
+      period: "August 2025 – May 2026",
+      description: "Tech Internship Roadmap Planner is an AI-driven platform that creates personalized, date-based internship preparation plans for students. The app asks targeted questions about skills, goals, and timelines, then generates a visual, month-by-month roadmap with milestones for skill development, projects, applications, and interviews — all wrapped in an accessible, modern UI.",
+      challengeTracks: [
+        "UI/UX Design Challenge (Figma)",
+        "Accessibility-First App Challenge (WCAG)",
+        "AI Integration Challenge (Gemini AI)",
+        "Animated UI Components Challenge (Framer Motion)"
+      ],
+      keyFeatures: [
+        "📅 Custom Date-Based Roadmaps – Plans tailored to your exact start and internship dates",
+        "🎨 Accessible, WCAG-Compliant UI – High contrast colors, large buttons, keyboard navigation",
+        "👥 Human Icon Illustrations – Represent milestones like networking, projects, and interviews",
+        "🧭 Animated Navigation Bar – Smooth transitions between sections",
+        "📊 Progress Tracker – Monitor milestones and completed tasks",
+        "🛠️ Role-Specific Tracks – Adjusts automatically for Software, Data, UX, or Cybersecurity focus"
+      ],
+      techStack: ["Bolt.new", "Supabase", "OpenAI API", "Netlify"],
+      github: "https://github.com/najmasultani/TechInternPathAI",
+      demo: "https://youtu.be/iqpZQ7NxX1A?si=YxAMc88sEjEPpA3l",
+      devpost: "https://devpost.com/software/sweinternpath-ai?ref_content=user-portfolio&ref_feature=in_progress",
+      showDemo: true
+    },
+    {
       title: "First Year Starter",
       subtitle: "Smart University Guide",
       event: "World's Largest Hackathon by Bolt.new",

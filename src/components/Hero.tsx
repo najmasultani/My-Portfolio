@@ -44,7 +44,7 @@ export const Hero = () => {
           
           <div className={`mb-6 transition-opacity duration-500 ${showSubtitle ? 'opacity-100' : 'opacity-0'}`}>
             <h2 className="text-2xl md:text-3xl font-semibold bg-gradient-to-r from-teal-500 to-indigo-500 bg-clip-text text-transparent">
-              AI & LLM Engineer
+              Engineering Science Student
             </h2>
           </div>
           
