@@ -30,9 +30,9 @@ export const Hackathons = () => {
       ],
       techStack: ["Python", "OpenCV", "MediaPipe", "pyautogui", "ElevenLabs API", "Google STT"],
       github: "https://github.com/najmasultani/Invisible-UI",
-      demo: "#", // Placeholder for demo video
-      devpost: "#", // Placeholder for devpost
-      showDemo: false // Set to false until demo video is available
+      demo: "https://framer.com/projects/Zero-Distance--nV9PyBnMbb4wt0S3KW7i-uLQRz?node=augiA20Il",
+      devpost: null, // No devpost for this project
+      showDemo: true
     },
     {
       title: "Tech Internship Roadmap Planner",
@@ -221,20 +221,22 @@ export const Hackathons = () => {
 
                   {/* Action Buttons */}
                   <div className="flex flex-wrap gap-3 pt-4">
-                    <Button 
-                      size="sm" 
-                      variant="outline" 
-                      className="flex-1 min-w-0 border-2 transition-all duration-300 hover:shadow-lg"
-                      style={{
-                        borderRadius: '0.75rem',
-                        borderColor: '#38BDF8',
-                        color: '#38BDF8'
-                      }}
-                      onClick={() => window.open(hackathon.devpost, '_blank')}
-                    >
-                      <ExternalLink className="w-4 h-4 mr-2 flex-shrink-0" />
-                      <span className="truncate">Devpost</span>
-                    </Button>
+                    {hackathon.devpost && (
+                      <Button 
+                        size="sm" 
+                        variant="outline" 
+                        className="flex-1 min-w-0 border-2 transition-all duration-300 hover:shadow-lg"
+                        style={{
+                          borderRadius: '0.75rem',
+                          borderColor: '#38BDF8',
+                          color: '#38BDF8'
+                        }}
+                        onClick={() => window.open(hackathon.devpost, '_blank')}
+                      >
+                        <ExternalLink className="w-4 h-4 mr-2 flex-shrink-0" />
+                        <span className="truncate">Devpost</span>
+                      </Button>
+                    )}
                     <Button 
                       size="sm" 
                       variant="outline" 
@@ -257,7 +259,7 @@ export const Hackathons = () => {
                         onClick={() => window.open(hackathon.demo, '_blank')}
                       >
                         <Play className="w-4 h-4 mr-2 flex-shrink-0" />
-                        <span className="truncate">Demo Video</span>
+                        <span className="truncate">Demo</span>
                       </Button>
                     )}
                   </div>
