@@ -9,6 +9,32 @@ export const Hackathons = () => {
 
   const hackathons = [
     {
+      title: "Invisible UI – Gesture & Voice Controlled Presentation & Video Tool",
+      subtitle: "Hands-Free Presentation Control",
+      event: "TechTo Hack 2025",
+      period: "September 2025",
+      description: "Invisible UI is a camera- and voice-driven system that lets presenters control Google Slides, PowerPoint, and embedded presentation videos completely hands-free. Using OpenCV and MediaPipe, it detects hand gestures in real time (✌️ quit, 👍 next, 👎 previous, 🤘 scroll up, 🤙 scroll down, 👌 start slideshow, ✋ stop slideshow) and sends the corresponding keyboard shortcuts to any active browser tab. It also integrates ElevenLabs real-time speech-to-text to support natural voice commands and live note taking.",
+      challengeTracks: [
+        "UI/UX Design Challenge (Framer)",
+        "AI Integration Challenge (OpenCV, MediaPipe, ElevenLabs)",
+        "Accessibility-First App Challenge (WCAG)",
+        "Creative Presentation Tools Challenge"
+      ],
+      keyFeatures: [
+        "🎥 Real-Time Gesture Control — Accurate hand tracking using OpenCV + MediaPipe; works in any browser tab running Google Slides, PowerPoint, or embedded video",
+        "🎙 Voice Control & Live Notes — ElevenLabs STT for natural language commands and automatic note-taking on cue",
+        "▶️ Video Playback Control — Start, pause, skip forward 10 seconds, or rewind 10 seconds in presentation videos with simple voice commands or a dedicated gesture",
+        "⌨️ Keyboard Emulation — Sends right/left arrows, space/esc, and media control keys via pyautogui to control slides and videos without touching the computer",
+        "⚡ Cross-Platform — Works on macOS and Windows with any modern webcam",
+        "🖐 Multiple Gestures — ✌️ Quit, 👍 Next Slide, 👎 Previous Slide, 🤘 Scroll Up, 🤙 Scroll Down, 👌 Start Slideshow, ✋ Stop Slideshow"
+      ],
+      techStack: ["Python", "OpenCV", "MediaPipe", "pyautogui", "ElevenLabs API", "Google STT"],
+      github: "https://github.com/najmasultani/Invisible-UI",
+      demo: "#", // Placeholder for demo video
+      devpost: "#", // Placeholder for devpost
+      showDemo: false // Set to false until demo video is available
+    },
+    {
       title: "Tech Internship Roadmap Planner",
       subtitle: "Personalized Internship Prep App", 
       event: "Panda Hack 2025",
