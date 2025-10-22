@@ -73,7 +73,7 @@ export const Hero = () => {
               borderColor: '#38BDF8',
               color: '#38BDF8'
             }}
-            onClick={() => window.open("https://drive.google.com/file/d/1ktMkbTANNMlGT7JwsqgjcyVV3GOSJwKi/view?usp=sharing", "_blank")}
+            onClick={() => window.open("https://drive.google.com/file/d/1-ynvULEamAGSf27i403sE2Lv0hefXVuD/view?usp=sharing", "_blank")}
           >
             Download Resume
           </Button>
