@@ -68,7 +68,7 @@ export const About = () => {
                 <div className="flex flex-col sm:flex-row gap-3 pt-4">
                   <Button 
                     className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 w-full sm:w-auto"
-                    onClick={() => window.open("https://drive.google.com/file/d/1-ynvULEamAGSf27i403sE2Lv0hefXVuD/view?usp=sharing", "_blank")}
+                    onClick={() => window.open("https://drive.google.com/file/d/1TLWyAB0o2t7cgobg-eJ4nyW9_6FQXu0_/view?usp=sharing", "_blank")}
                   >
                     Download Resume
                   </Button>
