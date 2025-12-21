@@ -9,6 +9,33 @@ export const Hackathons = () => {
 
   const hackathons = [
     {
+      title: "ADHD Scholarship Copilot",
+      subtitle: "Browser-Native AI Scholarship Assistant for ADHD Students",
+      event: "Toronto Anthropic AI Hackathon",
+      period: "November 2025",
+      description: "ADHD Scholarship Copilot is a browser-native AI tool designed specifically for ADHD students who struggle with long scholarship pages, task initiation, and deadline anxiety. It turns overwhelming scholarship requirements into an instant summary, checks eligibility against a saved profile, breaks the process into a micro-start \"mini baby step,\" and helps users stay committed with a focus mode that includes games during breaks, plus regular check-ins via a spotlight tool + focus timer. It also supports saving scholarships into a mini library and autofilling repetitive application forms.",
+      challengeTracks: [
+        "Scholarship / Student Success Challenge (reduce missed opportunities + improve completion)",
+        "Human-Centered AI / Accessibility (lower cognitive load, supportive workflow, accountability)",
+        "Productivity / Workflow Automation (summary, organization, autofill)"
+      ],
+      keyFeatures: [
+        "📋 Instant Scholarship Summary — extracts deadlines, values, and requirements from long scholarship pages",
+        "✅ Eligibility Checker — matches scholarship criteria against a saved user profile",
+        "👶 Micro-Start — creates a tiny first step (\"mini baby step\") to reduce task initiation friction",
+        "🎮 Focus Mode (Games During Breaks) — gamified breaks to help users stay engaged and return to tasks",
+        "🔦 Spotlight Tool + Focus Timer — regular check-ins to support sustained attention",
+        "📚 Save & Organize — mini scholarship library to track and prevent \"clustering\" / losing track",
+        "✍️ Autofill Forms — auto-fills common fields (name, contact, education) to reduce repetitive effort",
+        "📄 Simplified Scholarship Page — \"application fit + requirement summary\" view for clarity and speed"
+      ],
+      techStack: ["Next.js", "TypeScript", "TailwindCSS", "shadcn/ui", "PostgreSQL", "Prisma", "Claude (LLM)", "Vercel", "Chrome Extension", "Recharts", "Web Scraping"],
+      github: "https://github.com/najmasultani/adhd-scholarship-copilot",
+      demo: "",
+      devpost: null,
+      showDemo: false
+    },
+    {
       title: "Invisible UI – Gesture & Voice Controlled Presentation & Video Tool",
       subtitle: "Hands-Free Presentation Control",
       event: "TechTo Hack 2025",
