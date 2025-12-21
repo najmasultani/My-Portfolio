@@ -12,11 +12,15 @@ export const WorkExperience = () => {
       type: "PEY Co-op",
       description: "Supported the Monitoring and Diagnostic Centre team by applying AI to monitor thousands of station alarms, reduce unplanned downtime, and help optimize maintenance budgets through early fault detection.",
       achievements: [
-        "Built Advanced Pattern Recognition (APR) models in AVEVA using C# to detect early signs of equipment failure",
-        "Automated data workflows in Python and analyzed time-series trends using Seeq",
-        "Enabled real-time visibility into equipment conditions to help prioritize maintenance tasks"
+        "Monitor and analyze 100+ nuclear/hydro station alarms to identify issues, find root causes, and prevent equipment failures or safety risks",
+        "Build and maintain advanced pattern recognition models in AVEVA and C# for remote monitoring and performance analysis",
+        "Perform exploratory data analysis (EDA) and transformation of large time-series datasets using Python to extract actionable insights",
+        "Automate and streamline ETL pipelines with Python and SQL, reducing manual effort by 30% and improving data scalability and delivery",
+        "Develop and deploy machine learning models for predictive modeling and equipment health monitoring using Python (NumPy, Pandas, Scikit-learn, TensorFlow) to detect anomalies and support predictive maintenance",
+        "Apply LLM-based topic modeling in Azure Databricks to cluster text data, analyze trends, and deliver actionable insights to stakeholders",
+        "Act as an AI Ambassador, exploring AI opportunities, joining hackathons, prototyping, and helping deliver impactful AI-driven solutions"
       ],
-      technologies: ["Python", "C#", "AVEVA", "Seeq", "Machine Learning"]
+      technologies: ["Python", "C#", "AVEVA", "SQL", "Azure Databricks", "TensorFlow", "Scikit-learn", "NumPy", "Pandas", "Machine Learning", "LLMs"]
     },
     {
       title: "Research Assistant",
