@@ -30,10 +30,10 @@ export const Hackathons = () => {
         "📄 Simplified Scholarship Page — \"application fit + requirement summary\" view for clarity and speed"
       ],
       techStack: ["Next.js", "TypeScript", "TailwindCSS", "shadcn/ui", "PostgreSQL", "Prisma", "Claude (LLM)", "Vercel", "Chrome Extension", "Recharts", "Web Scraping"],
-      github: "https://github.com/najmasultani/adhd-scholarship-copilot",
-      demo: "",
-      devpost: null,
-      showDemo: false
+      github: "https://github.com/chenj926/adhd-scholarship-copilot",
+      demo: "https://youtu.be/0g_7WjLZeVY?si=FYorO6BywMzJfySb",
+      devpost: "https://devpost.com/software/adhd-scholarship-copilot?ref_content=user-portfolio&ref_feature=in_progress",
+      showDemo: true
     },
     {
       title: "Invisible UI – Gesture & Voice Controlled Presentation & Video Tool",
